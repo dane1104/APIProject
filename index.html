@@ -2,24 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore amazing endemic species from around the world" />
   <title>Amazing Endemic Species</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Amazing Endemic Species API</h1>
-  <div class="count-card">
-      <h3>Total Species Count: <span id="speciesCount"></span> Species</h3>
-      <h3>Countries: <span id="countryCount"></span> Countries</h3>
-  </div>
-  <form id="apiForm" class="search-bar">
-    <select id="endpoint">
-      <option value="species">Species</option>
-      <option value="random">Random</option>
-    </select>
-    <button type="submit">Search</button>
-  </form>
-  <div id="results"></div>
-  <div id="resultsGrid"></div>
+  <header>
+    <h1>Amazing Endemic Species API</h1>
+    <p class="subtitle">Discover unique species found only in specific regions</p>
+  </header>
+
+  <main>
+    <section class="stats-section">
+      <div class="count-card">
+        <div class="stat-item">
+          <h3>Total Species</h3>
+          <span id="speciesCount" class="stat-number">-</span>
+        </div>
+        <div class="stat-item">
+          <h3>Countries</h3>
+          <span id="countryCount" class="stat-number">-</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <form id="apiForm" class="search-bar" role="search">
+        <label for="endpoint" class="sr-only">Select search type</label>
+        <select id="endpoint" aria-label="Search type">
+          <option value="species">All Species</option>
+          <option value="random">Random Species</option>
+        </select>
+        <button type="submit" aria-label="Search species">Search</button>
+      </form>
+    </section>
+
+    <section class="results-section">
+      <div id="results" class="results-status" aria-live="polite"></div>
+      <div id="resultsGrid" class="results-container" role="region" aria-label="Species results"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Amazing Endemic Species. Data provided by AES API.</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
+
+
+//Here's a 3-5 sentence summary in Taglish:
+
+**I made the HTML better by adding proper tags like header,
+ main, section, and footer para ma-organize yung content into clear parts.
+ I made it easier for people with disabilities to use by adding special
+labels and support for screen readers, plus added mobile-friendly settings.
+I made the stats display look cleaner and changed the form labels para
+ mas madaling intindihin.Finally, I added some basic styling para mas 
+ professional tingnan while keeping it simple.
